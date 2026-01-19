@@ -1,0 +1,43 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-test:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # Step 3: Enable Corepack and set Yarn version
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare yarn@3.8.5 --activate
+
+      # Step 4: Install dependencies
+      - name: Install dependencies
+        run: yarn install
+
+      # Step 5: Run ESLint
+      - name: Run ESLint & Stylelint
+        run: yarn lint
+
+      # Step 6: Run tests
+      - name: Run tests
+        run: yarn test
