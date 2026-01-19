@@ -1,0 +1,164 @@
+@use "@/styles/breakpoints" as *;
+@use "@/styles/mixins" as *;
+
+.detailPage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+
+  &__back {
+    @include button-base;
+
+    align-self: flex-start;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+
+    @include desktop {
+      flex-direction: row;
+      gap: var(--spacing-xl);
+    }
+  }
+
+  &__imageWrapper {
+    flex-shrink: 0;
+
+    @include desktop {
+      width: 30rem;
+    }
+  }
+
+  &__image {
+    aspect-ratio: 1;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  &__name {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin: 0;
+  }
+
+  &__status {
+    align-items: center;
+    color: var(--color-text-secondary);
+    display: inline-flex;
+    font-size: var(--font-size-md);
+    gap: var(--spacing-xs);
+    margin: 0;
+
+    &::before {
+      background-color: var(--color-status-unknown);
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+    }
+
+    &--alive::before {
+      background-color: var(--color-status-alive);
+    }
+
+    &--dead::before {
+      background-color: var(--color-status-dead);
+    }
+  }
+
+  &__meta {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    display: grid;
+    gap: var(--spacing-sm) var(--spacing-md);
+    grid-template-columns: auto 1fr;
+    margin: 0;
+    padding: var(--spacing-md);
+  }
+
+  &__metaLabel {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+  }
+
+  &__metaValue {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  &__sectionTitle {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+  }
+
+  &__episodes {
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__episode {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  &__episodeCode {
+    color: var(--color-link);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &__episodeName {
+    color: var(--color-text-secondary);
+  }
+
+  &__loading,
+  &__error {
+    align-items: center;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40rem;
+    text-align: center;
+  }
+
+  &__errorTitle {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--spacing-sm);
+  }
+}
