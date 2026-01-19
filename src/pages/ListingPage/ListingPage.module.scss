@@ -1,0 +1,83 @@
+@use "@/styles/breakpoints" as *;
+
+.listingPage {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  &__title {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin: 0 0 var(--spacing-md);
+
+    @include desktop {
+      font-size: var(--font-size-2xl);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    @include desktop {
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__count {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  &__gridContainer {
+    min-height: calc(var(--card-min-height) * 2 + var(--spacing-lg));
+    position: relative;
+  }
+
+  &__grid {
+    display: grid;
+    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+
+    @include tablet {
+      gap: var(--spacing-lg);
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    }
+  }
+
+  &__loading,
+  &__empty,
+  &__error {
+    align-items: center;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-md);
+    justify-content: center;
+    min-height: calc(var(--card-min-height) * 2);
+    text-align: center;
+  }
+
+  &__error {
+    color: var(--color-status-dead);
+  }
+
+  &__errorTitle {
+    color: var(--color-text-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-sm);
+  }
+}
