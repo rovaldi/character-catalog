@@ -1,6 +1,6 @@
 {
-  "installCommand": "corepack enable && yarn install --immutable",
-  "buildCommand": "yarn build",
+  "installCommand": "node .yarn/releases/yarn-4.12.0.cjs install --immutable",
+  "buildCommand": "node .yarn/releases/yarn-4.12.0.cjs build",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
