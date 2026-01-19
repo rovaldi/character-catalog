@@ -1,0 +1,60 @@
+{
+  "name": "product-cart-roberto-valcarcel",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && stylelint \"src/**/*.{css,scss}\" --max-warnings ",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@apollo/client": "3.7.16",
+    "classnames": "^2.5.1",
+    "graphql": "16",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.12.0",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.9",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.53.0",
+    "@typescript-eslint/parser": "^8.53.0",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "globals": "^17.0.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0",
+    "prettier": "^3.8.0",
+    "sass": "^1.97.2",
+    "stylelint": "^17.0.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-prettier": "^5.0.3",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.53.0",
+    "vite": "^7.3.1"
+  },
+  "resolutions": {
+    "esbuild": "0.24.0"
+  },
+  "packageManager": "yarn@3.8.5+sha512.786c27300bc8fb134a1a0630db71cfeccc2b92272c031df17ff662876e89c2df488e6819dd7f2ffaf02e021b6827f75d3eb6a6df0a10218f72a589b735db6cc2"
+}
