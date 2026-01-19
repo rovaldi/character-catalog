@@ -6,7 +6,7 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "types": ["node", "jest"],
+    "types": ["node"],
     "paths": {
       "@/*": ["src/*"]
     },
@@ -19,11 +19,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "vite.config.ts",
-    "src/**/*.test.ts",
-    "src/**/*.test.tsx",
-    "server/**/*.cjs"
-  ],
+  "include": ["vite.config.ts", "server/**/*.cjs"],
   "exclude": ["node_modules", "dist"]
 }

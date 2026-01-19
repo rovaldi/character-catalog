@@ -8,7 +8,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
+    "typecheck": "tsc -b",
+    "typecheck:tests": "tsc -p tsconfig.test.json --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 && stylelint \"src/**/*.{css,scss}\" --max-warnings ",
     "preview": "vite preview",
     "test": "jest",
