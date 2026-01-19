@@ -1,6 +1,6 @@
 # Rick and Morty Character Explorer
 
-A React application that consumes the [Rick and Morty GraphQL API](https://rickandmortyapi.com/graphql) to display and explore characters from the show.
+A React application that consumes the [Rick and Morty GraphQL API](https://rickandmortyapi.com) to display and explore characters from the show.
 
 ## Live Demo
 
