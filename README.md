@@ -4,7 +4,7 @@ A React application that consumes the [Rick and Morty GraphQL API](https://ricka
 
 ## Live Demo
 
-🚀 **[View the app](https://your-app-name.vercel.app)**
+🚀 **[View the app](https://rick-and-morty-roberto-valcarcel.vercel.app/)**
 
 ## Getting Started
 
