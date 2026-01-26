@@ -136,14 +136,10 @@ If I had more time, here's what I'd add:
 
 The project uses GitHub Actions to run linting and tests on every push. The workflow configuration can be found in `.github/workflows/ci.yml`.
 
-## Additional Questions
-
-Answers to the technical and soft-skill questions can be found in [QUESTIONS.md](QUESTIONS.md).
-
 ## License
 
 This project is licensed for **non-commercial use only**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-Built by [Roberto Valcárcel](https://github.com/rvaledez)
+Built by [Roberto Valcárcel](https://github.com/rovaldi)
