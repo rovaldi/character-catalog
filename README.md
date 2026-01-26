@@ -111,27 +111,6 @@ Tests focus on user behavior rather than implementation details. I use `data-tes
 - **React.memo** only where it makes sense (CharacterCard in lists)
 - **No premature optimization** – I measured first and only added optimizations where needed
 
-## Potential Improvements
-
-If I had more time, here's what I'd add:
-
-### UX Improvements
-
-- **Skeleton loaders** instead of "Loading..." text for a more polished feel
-- **Search input** to filter characters by name directly
-- **Items per page selector** to let users choose how many characters to display (10, 20, 50)
-
-### Accessibility
-
-- **Full keyboard navigation** support for all interactive elements
-- **Skip to content** link for screen reader users
-- **Focus management** when navigating between pages
-
-### Technical
-
-- **E2E tests** with Playwright or Cypress
-- **Storybook** for component documentation
-
 ## Continuous Integration
 
 The project uses GitHub Actions to run linting and tests on every push. The workflow configuration can be found in `.github/workflows/ci.yml`.
