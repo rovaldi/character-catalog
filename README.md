@@ -11,7 +11,7 @@ A React application that consumes the [Rick and Morty GraphQL API](https://ricka
 ### Prerequisites
 
 - **Node.js** 20.x (recommended: use [nvm](https://github.com/nvm-sh/nvm))
-- **Yarn** 3.8.5 (managed via Corepack)
+- **Yarn** 4.12.0 (managed via Corepack)
 
 ## Setup
 
@@ -20,7 +20,7 @@ A React application that consumes the [Rick and Morty GraphQL API](https://ricka
 nvm install
 nvm use
 
-# Enable Corepack for Yarn 3
+# Enable Corepack for Yarn 4
 corepack enable
 
 # Install dependencies
